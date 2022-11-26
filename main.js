@@ -1,19 +1,23 @@
-const p = document.querySelector("p");
+const firstBlock = document.querySelector(".firstBlock");
+const secondBlock = document.querySelector(".secondBlock");
 const ruBtn = document.querySelector(".ru");
 const enBtn = document.querySelector(".en");
 
+const localizationData = {
+  ru: {
+    firstBlock: "Привет",
+    secondBlock: "Русский текст",
+  },
+  en: {
+    firstBlock: "Hello",
+    secondBlock: "English text",
+  },
+};
+
 const localization = () => {
-  let content = "";
   const lang = localStorage["lang"] || "ru";
-  switch (lang) {
-    case "ru":
-      content = "Привет";
-      break;
-    case "en":
-      content = "Hello";
-      break;
-  }
-  p.textContent = content;
+  firstBlock.textContent = localizationData[lang].firstBlock;
+  secondBlock.textContent = localizationData[lang].secondBlock;
 };
 
 localization();
