@@ -1,0 +1,28 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.x {
+  padding: 5px;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  background: #e8e8e8;
+  padding: 5px;
+  font-family: monospace;
+  font-size: 20px;
+
+  display: flex;
+  gap: 5px;
+
+  justify-content: center;
+  align-items: center;
+}
